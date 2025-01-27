@@ -18,6 +18,7 @@ public class Main {
         freezeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Freeze Action
                 Ball[] balls = panel.getBalls();
                for(int i = 0; i < balls.length; i++) {
                    if(balls[i].getFrozen()) {
