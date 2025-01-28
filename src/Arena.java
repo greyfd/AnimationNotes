@@ -12,7 +12,7 @@ public class Arena extends JPanel {
   }
 
 
-    Ball[] balls = makeBalls(1000);
+    Ball[] balls = makeBalls(1);
 
     public Ball[] getBalls() {
         return balls;
@@ -27,7 +27,7 @@ public class Arena extends JPanel {
 
         for (Ball ball : balls) {
             ball.draw(g);
-            ball.move(this);
+            ball.move(this, g);
             if (ball.getX() == 0 && ball.getY() == 0) {
                 setBackground(ball.getColor());
             }

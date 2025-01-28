@@ -100,8 +100,8 @@ public class Ball {
 
     }
 
-    public void move(Arena a) {
-
+    public void move(Arena a, Graphics g) {
+        Graphics2D g2d = (Graphics2D)g;
         if(!frozen) {
 
        x += xSpeed;
@@ -109,20 +109,24 @@ public class Ball {
 
         if(x > a.getSize().getWidth() - size) {
             xSpeed *= -1;
+            g2d.rotate(Math.random() * 360);
         }
 
 
         if(x < 0) {
             xSpeed *= -1;
+            g2d.rotate(Math.random() * 360);
         }
 
         if(y >= a.getSize().getHeight() - size) {
             ySpeed *= -1;
+            g2d.rotate(Math.random() * 360);
         }
 
 
         if(y < 0) {
             ySpeed *= -1;
+            g2d.rotate(Math.random() * 360);
         }
         }
     }
