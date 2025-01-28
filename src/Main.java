@@ -6,8 +6,6 @@ import java.awt.event.ActionListener;
 public class Main {
     public static void main(String[] args) {
         //ELEMENTS
-
-
         Boolean frozen = false;
         JFrame frame = new JFrame();
         Arena panel = new Arena();
@@ -32,7 +30,7 @@ public class Main {
             }
         });
         controls.add(freezeButton);
-        controls.setSize(400, 100);
+        controls.setSize(400, 20);
         frame.setLayout(new BorderLayout());
 
         //Add Elements

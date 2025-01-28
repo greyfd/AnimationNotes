@@ -112,7 +112,6 @@ public class Ball {
 
         if(x > a.getSize().getWidth() - size) {
             xSpeed *= -1;
-
         }
 
 

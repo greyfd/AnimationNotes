@@ -13,7 +13,7 @@ public class Arena extends JPanel {
   }
 
 
-    Ball[] balls = makeBalls(1);
+    Ball[] balls = makeBalls(1000);
 
     public Ball[] getBalls() {
         return balls;
