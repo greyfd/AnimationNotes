@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Arena extends JPanel {
 
@@ -19,8 +18,6 @@ public class Arena extends JPanel {
         return balls;
     }
 
-    Ball ball = new Ball(3,2,Color.RED,3,0,15);
-
     public Arena() {
         setBackground(Color.WHITE);
     }
@@ -28,20 +25,13 @@ public class Arena extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
 
-      for (int i = 0; i < balls.length; i++) {
-        balls[i].draw(g);
-        balls[i].move(this);
-        if(balls[i].getX() == 0 && balls[i].getY() == 0) {
-            setBackground(balls[i].getColor());
+        for (Ball ball : balls) {
+            ball.draw(g);
+            ball.move(this);
+            if (ball.getX() == 0 && ball.getY() == 0) {
+                setBackground(ball.getColor());
+            }
         }
-      }
-//
-//      ball.draw(g);
-//      ball.move(this);
-
-
-
-
 
 
         try {

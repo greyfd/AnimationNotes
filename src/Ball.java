@@ -1,9 +1,6 @@
 import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.util.Random;
 
 public class Ball {
-    Random random = new Random();
     private int xSpeed;
     private int ySpeed;
     private Color color;
@@ -74,7 +71,7 @@ public class Ball {
         return size;
     }
 
-    public void setxSpeed(int xSpeed) {
+    public void setXSpeed(int xSpeed) {
         this.xSpeed = xSpeed;
     }
 
@@ -90,7 +87,7 @@ public class Ball {
         this.x = x;
     }
 
-    public void setySpeed(int ySpeed) {
+    public void setYSpeed(int ySpeed) {
         this.ySpeed = ySpeed;
     }
 
