@@ -101,9 +101,38 @@ public class Ball {
 
     }
 
+
+
     public void move(Arena a, Graphics g) {
         Graphics2D g2d = (Graphics2D)g;
         AffineTransform old = g2d.getTransform();
+
+//        for(int i = 0; i < a.getBalls().length; i++) {
+//
+//            if (i != a.getBalls().length - 1) {
+//                if (this != a.getBalls()[i]) {
+//                    double distance = Math.sqrt(Math.pow((a.getBalls()[i].getX() - x), 2) + Math.pow((a.getBalls()[i].getY() - y), 2));
+//                    System.out.println(distance);
+//
+//
+//                    int radius = size / 2;
+//                    int radius2 = a.getBalls()[i].getSize() / 2;
+//
+//                    if(distance <= (radius * radius2)) {
+//                        int oldXSpeed = xSpeed;
+//                        xSpeed = a.getBalls()[i].getXSpeed();
+//                        a.getBalls()[i].setXSpeed(oldXSpeed);
+//
+//                        int oldYSpeed = ySpeed;
+//                        ySpeed = a.getBalls()[i].getYSpeed();
+//                        a.getBalls()[i].setYSpeed(oldYSpeed);
+//                    }
+//                }
+//            }
+//
+//        }
+
+
         if(!frozen) {
 
        x += xSpeed;

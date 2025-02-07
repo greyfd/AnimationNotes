@@ -34,6 +34,10 @@ public class Arena extends JPanel {
         }
 
 
+
+
+
+
         try {
             Thread.sleep(5);
         } catch(Exception e) {
