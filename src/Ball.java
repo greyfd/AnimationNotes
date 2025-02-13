@@ -7,6 +7,7 @@ public class Ball {
     private Color color;
     private int x, y;
     private int size;
+    private Boolean userControlled;
     private Boolean frozen = false;
 
     public Ball(int xSpeed, int ySpeed, Color color, int x,int y, int size) {
@@ -21,13 +22,22 @@ public class Ball {
 
 
     public Ball() {
-        this.xSpeed = (int)(Math.random() * 5) + 1;
+        this.xSpeed = ((int)(Math.random() * 5) + 1);
         this.ySpeed = (int)(Math.random() * 6);
         this.color = (new Color((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255)));
-        this.x = (int)(Math.random() * 400);
-        this.y = (int)(Math.random() * 400);
+        this.x = (int)(Math.random() * 400 + 50);
+        this.y = (int)(Math.random() * 400 + 23);
         this.size = (int)((Math.random() * 45) + 5);
+    }
 
+    public Ball(Boolean userControlled) {
+        this.xSpeed = ((int)(Math.random() * 5) + 1);
+        this.ySpeed = (int)(Math.random() * 6);
+        this.color = (new Color((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255)));
+        this.x = (int)(Math.random() * 400 + 50);
+        this.y = (int)(Math.random() * 400 + 23);
+        this.size = (int)((Math.random() * 45) + 5);
+        this.userControlled = userControlled;
     }
 
     public Ball(Arena a) {
@@ -116,9 +126,9 @@ public class Ball {
 //
 //
 //                    int radius = size / 2;
-//                    int radius2 = a.getBalls()[i].getSize() / 2;
+//                    int radius2 = (a.getBalls()[i].getSize()) / 2;
 //
-//                    if(distance <= (radius * radius2)) {
+//                    if(distance <= (radius + radius2)) {
 //                        int oldXSpeed = xSpeed;
 //                        xSpeed = a.getBalls()[i].getXSpeed();
 //                        a.getBalls()[i].setXSpeed(oldXSpeed);

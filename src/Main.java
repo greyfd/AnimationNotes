@@ -19,7 +19,7 @@ public class Main {
         controls.setLayout( new GridLayout(1,3));
         controls.setPreferredSize(new Dimension(400, 20));
         freezeButton.addActionListener(e -> {
-            //Freeze Action
+            //Freeze ActionMoving
             Ball[] balls = panel.getBalls();
             for (Ball ball : balls) {
                 if (ball.getFrozen()) {
